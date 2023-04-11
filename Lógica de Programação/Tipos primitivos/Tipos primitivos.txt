@@ -1,0 +1,13 @@
+Dados são processados por um programa pra resolver um problema
+Empregar uma informação, seja num word, excel
+Dados diferentes, um RG, matrícula, salário, notas, distância, datas...
+
+Tipos primitivos -->
+
+int - informação numérica que seja vinculada a valores interios, números de funcionários, números negativos
+
+float e double (de dobro de precisão) - números reais, salários, temperatura, distância
+
+char - caracteres alfanuméricos individuais, nota: 'A', opções: 'f'. Só 1 caracter
+
+string - INformações compostas, sequência de caracteres alfanuméricos, nomes próprios ou mensagens
