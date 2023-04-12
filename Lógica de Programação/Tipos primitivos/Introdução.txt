@@ -11,3 +11,7 @@ float e double (de dobro de precisão) - números reais, salários, temperatura,
 char - caracteres alfanuméricos individuais, nota: 'A', opções: 'f'. Só 1 caracter
 
 string - INformações compostas, sequência de caracteres alfanuméricos, nomes próprios ou mensagens
+
+Variáveis, pra guardar dados, uma célula da memória, usar dados que podem mudar (salário, peso) ou receber dados de um outro programa. Entradas pra um programa, precisa ter alguma forma de guardar esses dados
+
+Entrada de dados com o input, uma variável chamada input vai ser um Scanner

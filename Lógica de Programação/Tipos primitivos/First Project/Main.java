@@ -13,7 +13,6 @@ public class Main{
 
         //Operações com dados, aritméticas
 
-        System.out.print(2 + 3);
         System.out.println(50 - 5*6);
         System.out.println(17 / 3); //divisão inteira, pois está com números inteiros
         System.out.println(17 / 3.0); //tem um double, faz a divisão real. float são pra variáveis do tipo float
@@ -26,5 +25,11 @@ public class Main{
         System.out.printf("17/3 Com divisão interia: %d%n17/3 Com divisão real: %.2f%n", 17/3, 17/3.0); //agora p %f é double/float
 
         System.out.printf("12/2 Com divisão real: %.1f%n", 12.0/2);
+
+        System.out.printf("%s: %.2f", "resultado %n", (50+31)/99.0);
+        System.out.print(Math.pow(5, 2));
+        System.out.print(17 % 3);
+
+        
     }
 }
