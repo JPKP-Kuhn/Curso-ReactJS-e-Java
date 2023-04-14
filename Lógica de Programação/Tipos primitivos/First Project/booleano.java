@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class booleano {
     public static void main(String[] args) {
             System.out.printf("Result is %b%n", true);
-            System.out.printf("Result is %b%n", !true);
+            System.out.printf("Result is %b%n", false);
             System.out.printf("Result is %b%n", 2 > 5);
             System.out.println("Fazer um programa que execute a multiplicação de dois valores lidos. E se o resultado da multiplicação for menor que 25, mostrar a metade do resultado.");
 
