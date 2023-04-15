@@ -1,0 +1,18 @@
+System.out.print() está chamnado o método print
+
+Scanner input o Scanner é uma classe já definida pelo java, o input é um objeto dentro do Scanner
+
+Criando a própria classe:
+             nome da classe
+public class Account {
+   private String  name; // String é um atributo
+
+   public void setName (String name){  //método
+    this.name = name;
+   }
+   public String getName(){ //método
+    return name;
+   }
+}
+
+Quando o atributo é privado só os métodos dessa classe podem usar esse atributo, quando ele é público, outras classes podem usar ele

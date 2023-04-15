@@ -3,21 +3,16 @@ import java.util.Scanner;
 public class Exercícios {
     public static void main(String[] args) { 
         Scanner input = new Scanner(System.in);
-        System.out.print("Escreva um número de 1 a 6 para ver o exercício: ");
-        int teste = input.nextInt();
-        if (teste == 1){
-            exercicio1(input);
-        } else if (teste == 2){
-            exercicio2(input);
-        } else if (teste == 3){
-            exercicio3(input);
-        } else if (teste == 4){
-            exercicio4(input);
-        } else if (teste == 5){
-            exercicio5(input);
-        } else if (teste == 6){
-            exercicio6(input);
-        }
+        System.out.print("Escreva um número de 1 a 7 para ver o exercício: ");
+        switch (input.nextInt()){
+            case 1 -> exercicio1(input);
+            case 2 -> exercicio2(input);
+            case 3 -> exercicio3(input);
+            case 4 -> exercicio4(input);
+            case 5 -> exercicio5(input);
+            case 6 -> exercicio6(input);
+            case 7 -> exercicio7(input);
+            
         input.close();
     }
 
@@ -93,8 +88,32 @@ public class Exercícios {
         } else{
             System.out.println("Não teve aumento.");
         }
+    }
+
+    private static void exercicio7(Scanner input){
+        System.out.println("Fazer um programa que diz o menor entre três números recebidos.");
+
+        System.out.print("Digite o primeiro número: ");
+        double n1 = input.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        double n2 = input.nextDouble();
+
+        System.out.print("Digite o terceiro número: ");
+        double n3 = input.nextDouble();
+
+        // Math.min() pega o menor número
+        if (n1 <= n2 && n1 <= n3){
+            System.out.printf("O menor número foi %.2f, o primeiro %n", n1);
+        } else if (n2 <= n1 && n2 <= n3){
+            System.out.printf("O menor número foi %.2f, o segundo %n", n2);
+        } else if (n3 <= n2 && n3 <= n1){
+            System.out.printf("O menor número foi %.2f, o terceiro%n", n3);
+        }
+
 
     }
+
 
     
 }
