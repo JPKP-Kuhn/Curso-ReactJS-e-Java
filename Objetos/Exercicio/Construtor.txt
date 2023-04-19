@@ -1,0 +1,4 @@
+Construtor vai cirar os atributos da classe
+
+Um método especial que já deine os atributos que quer criar pro objeto
+Um método que tem o mesmo nomeme da classe. É um método que só serve pra iniciar o objeto

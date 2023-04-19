@@ -22,6 +22,6 @@ public class condicional {
                 System.out.println(" Aluno não aprovado");
             }
 
-        };
+        }
     }
 }

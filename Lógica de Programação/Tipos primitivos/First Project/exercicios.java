@@ -1,23 +1,24 @@
 import java.util.Scanner;
 
-public class Exercícios {
+public class exercicios {
     public static void main(String[] args) { 
         Scanner input = new Scanner(System.in);
         System.out.print("Escreva um número de 1 a 7 para ver o exercício: ");
         switch (input.nextInt()){
-            case 1 -> exercicio1(input);
+            case 1 -> exercicio1();
             case 2 -> exercicio2(input);
             case 3 -> exercicio3(input);
             case 4 -> exercicio4(input);
             case 5 -> exercicio5(input);
             case 6 -> exercicio6(input);
             case 7 -> exercicio7(input);
+        }
             
         input.close();
     }
 
 
-    private static void exercicio1(Scanner input) {
+    private static void exercicio1() {
                 
         System.out.println("João consegue terminar uma corrida com percurso de 1260 metros em 4 minutos. Faça um programa para mostrar a velocidade média de João em metros por segundo.");
 
@@ -107,7 +108,7 @@ public class Exercícios {
             System.out.printf("O menor número foi %.2f, o primeiro %n", n1);
         } else if (n2 <= n1 && n2 <= n3){
             System.out.printf("O menor número foi %.2f, o segundo %n", n2);
-        } else if (n3 <= n2 && n3 <= n1){
+        } else {
             System.out.printf("O menor número foi %.2f, o terceiro%n", n3);
         }
 
