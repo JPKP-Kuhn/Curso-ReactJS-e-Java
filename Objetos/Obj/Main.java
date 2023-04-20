@@ -12,7 +12,7 @@ public class Main {
         System.out.print("Digite o nome do cliente 1: ");
         Conta cliente = new Conta(inputStrings.nextLine(), -10);
 
-        System.out.print(" -- Conta do cliente 1 criada: --\n");
+        System.out.print(" -- Conta.java do cliente 1 criada: --\n");
 
         System.out.printf("Nome do cliente 1: %s%n", cliente.getName());
         System.out.printf("Saldo do cliente 1: %.2f%n", cliente.getSaldo());
@@ -21,7 +21,7 @@ public class Main {
         System.out.print("Digite o nome do cliente 2: ");
         Conta cliente2 = new Conta(inputStrings.nextLine(), 100);
 
-        System.out.print(" -- Conta do cliente 2 criada: --\n");
+        System.out.print(" -- Conta.java do cliente 2 criada: --\n");
         System.out.printf("Nome do cliente 2: %s%n", cliente2.getName());
         System.out.printf("Saldo do cliente 2: %.2f%n", cliente2.getSaldo());
 

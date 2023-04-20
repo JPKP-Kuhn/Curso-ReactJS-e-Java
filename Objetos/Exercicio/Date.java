@@ -36,7 +36,8 @@ public class Date {
     }
 
     public void displaydate(int dia, int mes, int ano){
-        System.out.printf("%s/%s/%s",this.dia, this.mes, this.ano);
+
+        System.out.printf("Data %s/%s/%s %n",this.dia, this.mes, this.ano);
     }
 
 }
