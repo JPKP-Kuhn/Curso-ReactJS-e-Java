@@ -20,7 +20,7 @@ public class Triangulo {
                 System.out.println("Triângulo equilátero");
             } else if (a == b ^ a == c) {
                 System.out.println("Triângulo isóceles");
-            } else if (a != b && a != c && b != c) {
+            } else if (a != b && a != c && b != c) { //pode ser só um else
                 System.out.println("Triângulo escaleno");
             }
         } else {

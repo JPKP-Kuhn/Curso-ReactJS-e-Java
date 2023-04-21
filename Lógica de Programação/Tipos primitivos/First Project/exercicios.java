@@ -12,6 +12,7 @@ public class exercicios {
             case 5 -> exercicio5(input);
             case 6 -> exercicio6(input);
             case 7 -> exercicio7(input);
+            default -> System.out.println("Não digitou uma das opções");
         }
             
         input.close();
