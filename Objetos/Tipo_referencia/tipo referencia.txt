@@ -1,0 +1,10 @@
+Duas variáveis que guardam o mesmo objeto. No geral objetos são
+ do tipo referência.
+ Quando muda algo de um objeto e tem outro objeto que pega a referência
+ da mesma classe do primeiro muda os dois objetos. Por causa de um endereço de
+ memória que diz onde pode ser acessado. Dois objetos que é uma referência pra
+ uma mesma classe terão o mesmo endereço
+ Usa isso porque as classes guardam mais informações e elas podem ter vários
+ parâmetros, podem agregar várias informações
+ Os tipos primitivos armazenam o conteúdo, os tipos referência armazenam o mesmo
+ endereço
