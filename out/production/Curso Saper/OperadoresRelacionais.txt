@@ -1,3 +1,0 @@
-if
-else
-Direcionar um código
