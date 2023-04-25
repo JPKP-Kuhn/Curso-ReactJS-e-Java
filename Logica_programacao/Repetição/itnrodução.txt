@@ -1,0 +1,1 @@
+Repetir um processo várias vezes, resumindo o código, usar o while e do while
