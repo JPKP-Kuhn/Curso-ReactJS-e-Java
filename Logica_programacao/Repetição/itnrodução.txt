@@ -1,1 +1,4 @@
 Repetir um processo várias vezes, resumindo o código, usar o while e do while
+
+usando o for
+for (int contador = 1; contador <= 10; counter++)

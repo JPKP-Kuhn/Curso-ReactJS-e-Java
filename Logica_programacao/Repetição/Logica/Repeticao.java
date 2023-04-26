@@ -25,6 +25,17 @@ public class Repeticao {
 
         System.out.println("Depois do do..while:");
         System.out.println(counter);
+
+        System.out.println("Usando o for");
+        for (int i = 1; i <=10; i++){
+            System.out.printf("%d %n", i);
+        }
+        //as variáveis só existem dentro do for
+        for(int i = 100; i >= 1; i--){
+            int j = 2*i;
+            System.out.printf("%d %n", i);
+            System.out.printf("%d %n", j);
+        }
     }
     
 }
