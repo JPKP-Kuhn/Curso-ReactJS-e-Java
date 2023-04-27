@@ -6,12 +6,15 @@ import java.util.Scanner;
 public class exercicios {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        System.out.print("Escreva um número de 1 a 4 para ver o exercício: ");
+        System.out.print("Escreva um número de 1 a 7 para ver o exercício: ");
         switch (input.nextInt()){
             case 1 -> exercicio1();
             case 2 -> exercicio2();
             case 3 -> exercicio3();
             case 4 -> exercicio4();
+            case 5 -> exercicio5();
+            case 6 -> exercicio6();
+            case 7 -> exercicio7();
             default -> System.out.println("Não digitou uma das opções");
         }  
         input.close();
@@ -100,19 +103,13 @@ public class exercicios {
             System.out.print("Adicionar(1) ou remover(2): ");
             int addremo = input.nextInt();
 
-            if (escolha == 'T' && addremo == 1){
-                vinhoT++;
-            } else if (escolha == 'T' && addremo == 2){
-                vinhoT--;
-            } else if (escolha == 'B' && addremo == 1){
-                vinhoB++;
-            } else if (escolha == 'B' && addremo == 2){
-                vinhoB--;
-            } else if (escolha == 'R' && addremo == 1){
-                vinhoR++;
-            } else if (escolha == 'R' && addremo == 2){
-                vinhoR--;
+            switch(escolha) {
+                case ('T') -> {if(addremo == 1){vinhoT++;}else{vinhoT--;}}
+                case('B') -> {if(addremo == 1){vinhoB++;}else{vinhoB--;}}
+                case('R') -> {if(addremo == 1){vinhoR++;}else{vinhoR--;}}
+                default -> System.out.println("Não digitou uma das opções");
             }
+           
             total = vinhoT + vinhoB + vinhoR;
             System.out.print("Você quer encerrar? S/n ");
             char Sn = input.next().charAt(0);
@@ -123,4 +120,61 @@ public class exercicios {
         System.out.printf("%.2f, %.2f, %.2f %n", vinhoT, vinhoB, vinhoR);
         System.out.printf("Porcentagem de cada vinho: \n Total: %.2f \n Vinho Tinto: %.2f%% \n Vinho Branco: %.2f%% \n Vinho Rosê: %.2f%% %n", total, (vinhoT/total * 100), (vinhoB/total * 100), (vinhoR/total * 100));
     }
+
+    public static void exercicio5(){
+        System.out.println("Crie um programa que usa um comando for para somar os inteiros pares de 2 até 20 e armazena o resultado em uma variável chamada total.");
+
+        int total = 0;
+        for (int i = 0; i <=20; i++){
+            if (i % 2 == 0){
+                total += i;
+            }
+        }
+        System.out.println(total);
+    }
+
+    public static void exercicio6(){
+        System.out.println("Faça um programa que mostra o valor das vendas de uma loja e a média de vendas de todos os vendedores. O usuário do programa deve fornecer a quantidade de vendedores da loja e o valor das vendas de cada vendedor.");
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite a quantidade de vendedores: ");
+        int quantidadeVendedores = input.nextInt();
+
+        double valorVendas;
+        double totalVendasloja = 0;
+        double maiorVenda = 0;
+        int melhorVendedor = 0;
+
+        for(int i = 0; i < quantidadeVendedores; i++){
+            System.out.printf("Digite o valor das vendas do %dº vendedor: ", i+1);
+            valorVendas = input.nextDouble();
+            totalVendasloja += valorVendas;
+            
+
+            if (valorVendas > maiorVenda){
+                maiorVenda = valorVendas;
+                melhorVendedor = i + 1;
+            }
+        
+        }
+        System.out.printf("Valor total de vendas da loja: %.2f %n", totalVendasloja);
+        System.out.printf("A média das vendas dos vendedores é: %.2f %n", totalVendasloja/quantidadeVendedores);
+        System.out.printf("Maior valor de vendas entre os vendedore: %.2f. O melhor vendedor foi %dº %n", maiorVenda, melhorVendedor);
+    }
+
+    public static void exercicio7(){
+        System.out.println("Uma pessoa investe R$1000,00 em uma conta poupança rendendo 2% de juros por ano. Supondo que todos os juros sejam deixados em depósito, calcule e apresente a quantia de dinheiro na conta no final de uma determinada quantidade de anos fornecida pelo usuário.");
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Quantos anos o dinheiro ficará guardado? ");
+        int anos = input.nextInt();
+        double investimento = 1000;
+        for (int i = 0; i < anos; i++){
+            investimento *= 1.02;
+            System.out.printf("No ano %d a quantia de dinheiro é R$%.2f \n", i+1, investimento);
+        }
+        System.out.printf("Valor total no final do período: %.2f \n", investimento);
+    }
+
 }

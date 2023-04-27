@@ -1,0 +1,2 @@
+Array, vetores de notas. Guardar vários informações.
+int[] myArray
