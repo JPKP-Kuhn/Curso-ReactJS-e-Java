@@ -36,5 +36,25 @@ public class exercicios {
 
     public static void exercicio2(){
         System.out.println("Fazer um programa que recebe a nota de cada aluno de uma turma. O programa deve mostrar a média geral da turma e a quantidade de alunos com média maior ou igual a média da turma.");
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite a quantidade de alunos: ");
+        int alunos = input.nextInt();
+
+        double media = 0;
+        int acimaMedia = 0;
+        double[] nota = new double[alunos];
+
+        for (int i = 0; i < nota.length; i++){
+            System.out.printf("Digite a nota do %dº aluno: ", i+1);
+            nota[i] = input.nextDouble();
+            media += nota[i]/nota.length;
+            System.out.printf("Nota do %dº aluno: %.2f \n", i+1, nota[i]);
+        }
+        for (int i =0; i < nota.length; i++){
+            if (nota[i] >= media){acimaMedia++;}
+        }
+        System.out.printf("Media da turma: %.2f. Alunos que tiraram acima ou igual a média %d \n", media, acimaMedia);
+        
     }
 }
