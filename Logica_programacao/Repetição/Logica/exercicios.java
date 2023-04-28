@@ -43,7 +43,7 @@ public class exercicios {
     public static void exercicio2(){
         System.out.println("Faça um programa que recebe do usuário o salário de todos os 20 funcionários de uma empresa. O programa deve mostrar o gasto da empresa com o salário dos funcionários. Também deve mostrar a média salarial da empresa");
         Random random = new Random();
-        Scanner input = new Scanner(System.in);
+        
         double gasto = 0;
         int i = 0;
         while(i < 20){

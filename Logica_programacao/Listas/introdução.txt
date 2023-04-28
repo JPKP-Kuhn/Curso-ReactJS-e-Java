@@ -1,2 +1,5 @@
 Array, vetores de notas. Guardar vários informações.
 int[] myArray
+
+//cada posição é uma referência pro aluno
+//e os atributos que são guardados num objeto da classe Aluno é nome, nota1 e nota2

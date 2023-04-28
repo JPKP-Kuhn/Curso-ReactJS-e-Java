@@ -1,14 +1,18 @@
 package Logica_programacao.Listas;
 
+import java.util.Random;
 import java.util.Scanner;
+
+import javax.xml.validation.Validator;
 
 public class exercicios {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        System.out.print("Escreva um número de 1 a 2 para ver o exercício: ");
+        System.out.print("Escreva um número de 1 a 3 para ver o exercício: ");
         switch (input.nextInt()){
             case 1 -> exercicio1();
             case 2 -> exercicio2();
+            case 3 -> exercicio3();
             default -> System.out.println("Não digitou uma das opções");
         }  
         input.close();
@@ -56,5 +60,23 @@ public class exercicios {
         }
         System.out.printf("Media da turma: %.2f. Alunos que tiraram acima ou igual a média %d \n", media, acimaMedia);
         
+    }
+
+    public static void exercicio3(){
+        System.out.println("Cem funcionários foram pesquisados para dar uma nota de 1 a 10 para a qualidade da comida no restaurante da empresa, com 1 sendo “péssima” e 10 sendo “excelente”. Coloque as 100 respostas em um vetor de inteiros e apresente a frequência de cada nota.");
+
+        Random random = new Random();
+        int[] avaliacao = new int[100];
+        int[] notas = new int[10];
+       
+
+        for (int i = 0; i < avaliacao.length; i++){
+            int nota = random.nextInt(10) + 1;
+            avaliacao[i] = nota;
+            notas[nota - 1]++;
+        }
+
+        System.out.printf("Quantidades de cada nota: \n Nota 1: %d, Nota 2: %d, Nota 3: %d, Nota 4 %d, Nota 5: %d, Nota 6: %d, Nota 7: %d, Nota 8: %d, Nota 9: %d, Nota 10: %d %n", notas[0], notas[1], notas[2], notas[3], notas[4], notas[5], notas[6], notas[7], notas[8], notas[9]);
+       
     }
 }
