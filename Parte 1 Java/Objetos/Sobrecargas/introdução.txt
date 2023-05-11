@@ -1,0 +1,12 @@
+Métodos estáticos que não precisam de um objeto pra cria-los, só chamar eles
+Como o display ele já é definido na classe em que é colocado
+
+private - pra outras classes não acessarem ele
+static - não precisa criar um objeto da classe pra chamar a função, só chama ela. Com ele não usa o this. pois não terá um atributo duma classe pra alterar
+
+Sobrecarga de Métodos
+
+Ter dois métodos que tem o mesmo nome, porque eles fazem praticamente a mesma coisa, pode ser que um só recebe como parâmetro um vetor de outro tipo, um recebe e print como int e outro que faz a mesma coisa, mas o tipo de parâmetro é um String
+O java sabe o qual utilizar (tem o mesmo nome) pelo tipo do parâmetro
+
+Modificadores de acesso
