@@ -1,0 +1,14 @@
+Entidades
+Atributos 
+Relacionamentos
+
+Fazer uma modelagem é criar uma representação parecida com a realidade
+
+Modelo Entidade/Relacionamento (MER)
+O Diagrama Entidade/Relacionamento(DER) é a representação gráfica do MER
+Entidades, relacionamentos e atributos
+
+A entidade é o objeto físico ou conceitual da realidade sobre o qual se deseja manter as informações no banco de dados
+Num sistema bancário: Cliente, agência, conta corrente e cheque
+
+Atributo: Dado associado a cada ocorrêcia duma entidade ou relacionamento

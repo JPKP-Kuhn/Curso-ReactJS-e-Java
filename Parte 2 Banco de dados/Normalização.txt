@@ -1,0 +1,15 @@
+Existem 3 formas normais. Ter tudo bem escrito e documentado
+Gerar um conjunto de tabelas sem redundância e dados ambíguos
+Capturar ideias, muitas vezes já intuitivas, pra estruturar melhor
+FN1 - Evitar aninhamento de tabelas (identificar uma segunda lá dentro), tem muitos atributos. Decompor em outras tabelas, evitar dados ambíguos
+EX:
+Tabela com alunos e suas diciplinas, o João tá em 4 disciplinas
+
+FN2 - dependência funcional, atributos que dependem de outros, este determinava os atributos. A chave primária determina todos os outros, pode acontecer entre outros atributos, pode usar só ela pra responder. Pode ter mais de uma chave primária
+Dependência funcional total
+Dependência funcional parcial
+Dependência funcional transitiva
+
+Todos os atributos tem que ter Dependência funcional total em relação a chave e estar também na FN1
+
+FN3 - estar na FN2 e todo atributo não-chave não possui dependência funcional transitiva com a chave primária

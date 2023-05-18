@@ -1,0 +1,147 @@
+Structure Query Language - SQL
+linguagem padrão pra bancos SGBDs relacionais comerciais
+termos: tabels, linhas e colunas para relação, tupla e atributo, respectivamente
+
+DDL - definição da estrutura e organização dos dados armazenados e relações que existem entre eles
+
+tipos: Number (bem versátil pra vários tipos), Date (datas) varchar2 (conjunto de caracteres)
+
+Estrutura básica: create table <table_name> (definição das colunas e tipos, outra coluna);
+Princiapla comando do DDL
+create table aluno(
+cpf number primary key
+nome varchar2(30) not null,
+peso number,
+cidade varchar2(10)
+);
+select * from alunos
+vai retornar no data found porque não tem nenhuma linha
+insert into aluno(cpf, nome, peso, cidade) values (000, 'joao pedro', 65, 'Florianópolis');
+
+Como a ordem tá certinha poderia ter omitido o 1º () e peso e cidade não tem o valor not null
+
+alter table <table_name> add (<new_column> <data type);
+alter table <table_name> drop (<column_name>); // exclusão de coluna
+mas é melhor: alter table <table_name> set unused column <column_name>; ela não é mais usada, mas os dados continuam
+
+alter table <table_name> modify (<column_name> ACTION);
+ACTION: INVISIBLE // ele não aparece mais
+VISIBLE // volta a ser visível
+email varchar2(50) not null // ele agora foi definido como not null
+fone varchar(20) // o 20 foi modificado, qunado diminui o alor original pode acabar truncando um valor original. Reduzir o tamanho de um vetor, aumentar não tem problema
+Se for modificar alguma coisa no dado com o modify precisa primeiro garantir que não vai interferir em nada que já está na tabela
+
+dá pra fazer também um drop de uma tabela
+
+DML - inclusão insert, remoção delete, atualização update, seleção select
+delete e update pode acabar apagando tuod se esquecer do predicado
+Selecionando: select * form table; //* todas as colunas duma tabela
+select <column1>, <clumn2> from <table_name>
+selct * form table_name where <condition>;
+no where coloca as condições, usar and, or
+select atributos específicos where algum dos atributos < ou > ...
+
+insert into table_name (col1, col2,... atributos)
+    values ('value1', 'value2',...)
+insert int o table_name values (...)
+commit; pra garantir que as mudanças foram commitadas no banco
+
+update <table> //atualizar linhas que já existem
+set     <col1> = 'value1',
+        <col2> = 'value2'
+    where <condition>;
+
+commit;
+
+sem o where vai atualizar todas as linhas da tabela, modificar apenas as linhas que eu quero modificar
+
+update produtos
+ set    preco = preco*1.1, //ou pode ser 1,1
+where  categoria = 'alimentos';
+
+update carros
+ set    cor = 'azul',
+where   cor = 'preto';
+
+delete from <table>
+where <condition>;
+
+DCL direitos e permissões , privilégio de acesso às tabelas pra um determinado usuário
+
+GRANT <privilégio> ON <OBJECT> TO <users>
+privilégios como selct, insetrt, update, delete, objects de tabelas, visões ou colunas, references, indexes
+users: public ou nome de usuário cadastrado
+GRANT select, insert ON cliente, produto TO user01;
+
+Revoke remove os privilégios concedidos via GRANT
+REVOKE <privilégios> OM object FROM user
+
+Agregar e agrupar dados e ordená-los
+joins - é uma conjunta que combina o registro de duas ou mais tabelas. Não precisam ter o mesmo número de linhas
+
+Cross join: produto cartesiano, de álgebra relacional, cada linha duma tabela casa com as linhas da outra tabela
+
+Inner join: Com condição de junção, apresentar só os casamentos que satisfazerem as condições
+
+Outer join: numa tabela a e uma b, se fazer um left outer join retorna todas as linhas da tabela a e tentar casar com a da b, se não casar é colocado um null (sem ninguém pra casar). O right pega a tabela da direita
+
+sintaxe oracle:
+select *
+    from tabela1, tabela2;
+
+estilo ANSI
+select *
+    from tabela1 cross join tabela2;
+
+inner join, é o join padrão
+oracle:
+select * 
+    from tabela1, tabela2
+    where tabela1_id = tabela2_id;
+
+ANSI:
+select *
+    from tabela1 inner join tabela2 //inner é opcional,pode ser só join
+    on tabela1_id = tabela2_id
+
+
+Outer join
+left outer join e right outer join
+oracle
+select *
+    from tabela1, tabela2  //tabela da esquerda é a 1
+    where tabela1_id = tabela2_id (+);
+
+ANSI
+select *
+    from tabela1 left outer join tabela2
+    on tabela_id = tabela_id;
+
+right outer join as linhas da tabela2 e as linhas da tabela1 que satisfazem a condição
+
+oracle
+select * from tabela1, tabela2
+    where tabela1_id = tabela2_id (+) //o mais indica se é right ou left, nesse caso é left. O mais é o oposto, o que tá no select é o left com o tabela1
+
+ANSI
+select *
+    from tabela1 left outer join tabela2
+    on id_tabela1 = id_tabela2;
+
+
+Agregando e agrupando dados
+Funções de agregação combinam linhas
+Único grupo que pode ser uma tabela inteira, se usar eles, poderá ter calculos numa tabela
+
+Count (Nº de linhas), Sum, Min, Max, Avg, Stddev
+
+Dsitinct x All
+select count(distinct cor)
+from brinquedos;
+O distict conta o número de coisas distintos, tem várias coisas da mesma cor, o count conta todos, o distict conta só uma vez
+
+Agrupando agregações: group by
+retorna a quantidade de um atributo de uma característica; tantos brinquedo que estão classificados como vermelho
+
+Ordenando dados
+Order by

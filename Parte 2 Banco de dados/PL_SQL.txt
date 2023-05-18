@@ -1,0 +1,38 @@
+Extensão do SQL criada pela oracle
+usar comandos de lógica de programação e comandos SQL de bancos de dados.
+Realizar chamadas de procedimentos armazenadas a partit de outras linguagens como Java, C# ou PHP
+
+Identificadores são os nomes dados a um objeto/sql
+podem ser constantes, variáveis exceções, unidades básicas (blocos, procedures, functions), palavras reservadas e labels
+esses noms são case-insensitive, contém até 30 caracteresm sem espaço em branco, caracteres especiais $_#
+<variable_name> <datatype>;
+<variable_name> <datatype> := <default_value>;
+
+Constantes: pi constant number := 3.141592654;
+
+Bloco: agrupa declarações e ações executáveis relacionadas. Bloco anônimo não tem identificador, ao contrário de procedures e functions
+
+DECLARE
+-- seção de definições
+BEGIN
+-- ações executáveis
+EXCEPTION
+-- exceções
+END;
+
+DECLARE
+mensagem varchar2(20):= 'Hello World';
+BEGIN
+dbms_output.put_line(mensagem);
+END
+
+Aninhamento de blocos, dentro do BEGIN declara outro bloco
+Operadores pra aritméticos ou lógicos
+
+Operadores aritméticos: +, -, *, /, **
+Operadores relacionais: = , !=,<>,~=, >, <, <=, >=
+Operadores de comparação: LIKE (se a string tem um padrão %qualquer string de 0 ou mais caracteres; _ um único caraactere), between pra definir um intervalo, is null pra verificar se é nulo
+Operadores lógicos: AND, OR, NOT
+
+Condicionais com if then, elsif e else
+Repetições LOOP e END LOOP; e uma condição pra ter o exit. while loop, já define uma condição. for loop pra já controlar o contador

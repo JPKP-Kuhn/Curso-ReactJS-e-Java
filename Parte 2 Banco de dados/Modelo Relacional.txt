@@ -1,0 +1,15 @@
+Representação de dados em tabelas, relações
+Domínio de aaplicação, entidades (classe, tabela relação) e relacionamentos
+
+Relação (tabela)
+Tupla (linha), o elemento em si
+Atributo (coluna), preço, cor, preço
+Domínio de atributo, conjunto de valores, tipo de dado, String (var char), float, double
+Chave ,atributo que identifica o elemento, tipo um CPF, um id (localizar uma Tupla, chave primária ou chave mãe, chave composta com mais identificadores)
+Restrições de integridade, manter consistência nos dados -
+Domínio: valroes do atributo dentro do seu domínio
+
+Tabela de valores
+
+Restrições de integridade -
+Domínio, Entidade, Chave, Referencial, Semântica

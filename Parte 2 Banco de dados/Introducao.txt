@@ -1,0 +1,26 @@
+Dado x Informação
+Dado é o elemento bruto da Informação e sozinho e sem contexto não quer dizer nada
+A Informação é o conjunto de dados estruturados e acrescidos de contexto, com relevância e utilidade.
+Com a Informação analisada pelas pessoas gera-se conhecimento. A aprendizagem e experiência obtida
+
+Banco de dados x Sistema de Banco de dados
+
+1º - coleção de dados inter-relacionados e contém informações relevantes a uma empresa ou instituição. Aplçicação do seu programa
+
+2º - o sistema (gerenciamento) de banco de dados (SGBD, onde cria um banco de dados em si) é um conjunto de programas para acessar um ou mais bancos. É pra recuperar dados de maneira eficiente ele controla como vai ser guardado fisicamente, segurança, backup.
+
+EX: instituições bancárias, armazenar informações dos clientes, o extrato de transações; Linhas aéreas, voos, reservas; Universidades, armazenar os registros de alunos com suas informações pessoais e acadêmicas; Vendas, produtos, compras (data, valor); Recursoss humanos, informações de funcionários; Indústria, matéria-prima, produtos.
+Qual escopo usar? Quanto maior, mais ferramentas vai ter que implementar
+
+Modelo Relacional - conjunto de tabelas com tabelas == relação
+atributo é uma coluna na relação
+
+DDL (criar), DML(manipualar), DCL(permissões)
+
+SQL - Standart Query Language (Linguagem de consulta padrão). Pra criar tabelas e fazer consultas em bancos relacionais
+
+Oracle SQL é o SQL no SGBD da Oracle, com o dialeto PL/SQL
+
+Relação, uma tabela
+tupla, uma linha
+
