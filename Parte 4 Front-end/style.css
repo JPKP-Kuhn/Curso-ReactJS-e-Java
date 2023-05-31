@@ -1,0 +1,46 @@
+body{
+    margin: auto;
+    font-family: serif;
+    line-height: 1,5;
+}
+span{
+    text-align: center;
+    text-shadow: 2px 4px 5px gray;
+    font-size: xx-large;
+    font-weight: 50px;
+    margin-top: 50px;
+    letter-spacing: 0.01cm;
+}
+div{
+    text-align: center;
+    font-size: small;
+}
+p{
+    text-align: center;
+    font-style: italic;
+}
+.search{
+    background-color: rgb(211,211,211);
+}
+
+#G{
+    color: blue;
+}
+#O{
+    color: red;
+}
+#o{
+    color: yellow;
+}
+#g{
+    color: blue;
+}
+#l{
+    color: green;
+}
+#e{
+    color: red;
+}
+#excla{
+    color: blue;
+}
