@@ -25,19 +25,31 @@ body{
     margin-left: 70%;
     width: 150px;
 }
-.container{
+.container-my-1-container-fluid{
+    display: grid;
     background-color: bisque;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 .container-my-5-container-fluid{
     display: grid;
     background-color: bisque;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
 #professor{
     image-rendering: auto;
     border-radius: 100%;
 }
-.col-md-6-col-sm-12{
-    font-size: large;
+.col-md-4-col-sm-6{
+    font-size:xx-large;
+}
+.container-my-2-container-fluid{
+    display: grid;
+    background-color: bisque;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.relogio:hover{
+    color: orange;
 }
