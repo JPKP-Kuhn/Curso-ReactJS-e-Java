@@ -48,8 +48,5 @@ body{
     display: grid;
     background-color: bisque;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-.relogio:hover{
-    color: orange;
+    grid-template-rows: 1fr 1fr;
 }
