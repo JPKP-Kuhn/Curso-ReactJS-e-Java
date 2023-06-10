@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(135,206,250);
+}
+#logo{
+    align-self: flex-start;
+    image-rendering: auto;
+    min-height: 10px;
+    max-height: 50px;
+    min-width: none;
+    max-width: fit-content;
+}
+#letivo{
+    display: flex;
+    min-width: none;
+    max-width: 150px;
+    max-height: 30px;
+}
+#perfil{
+    display: flex;
+    min-width: none;
+    max-width: 150px;
+    max-height: 30px;  
+}
+#encerrar{
+    margin-left: 70%;
+    width: 150px;
+}
+.container{
+    background-color: bisque;
+}
+.container-my-5-container-fluid{
+    display: grid;
+    background-color: bisque;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#professor{
+    image-rendering: auto;
+    border-radius: 100%;
+}
+.col-md-6-col-sm-12{
+    font-size: large;
+}
