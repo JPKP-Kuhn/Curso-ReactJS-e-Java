@@ -23,7 +23,7 @@ body{
 }
 #encerrar{
     margin-left: 70%;
-    width: 150px;
+    max-width: 130px;
 }
 .container-my-1-container-fluid{
     display: grid;
